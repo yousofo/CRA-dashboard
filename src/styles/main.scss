@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* open-sans-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./open-sans-v35-latin/open-sans-v35-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./open-sans-v35-latin/open-sans-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./open-sans-v35-latin/open-sans-v35-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./open-sans-v35-latin/open-sans-v35-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./open-sans-v35-latin/open-sans-v35-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./open-sans-v35-latin/open-sans-v35-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+input:focus-within {
+  outline: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+$bar1: #242635;
+$bg1: #ededed;
+$font1: #b5b4b4;
+$fontblack: #233650;
+$font3: #3a0347;
+$maintrans: 0.5s;
+.darkfont {
+  color: $fontblack;
+}
+.yn-text {
+  font-size: 0.9rem;
+}
+.dark {
+  .side-bar {
+    span,
+    p,
+    li {
+      color: red;
+    }
+  }
+}
+.barClose {
+  background-color: $bar1;
+}
+.app {
+  .side-bar {
+    background-color: $bar1;
+    height: 100vh;
+    nav ul {
+      z-index: 10;
+      ul {
+        z-index: 9;
+        transition: max-height 0.3s;
+        max-height: 0;
+      }
+    }
+    .active-btn {
+      > ul {
+        max-height: 150px;
+        transition: max-height 0.5s;
+      }
+      > button > svg {
+        rotate: 180deg;
+      }
+    }
+    span,
+    li {
+      color: $font1;
+    }
+  }
+  > div {
+    background-color: $bg1;
+  }
+  header {
+    max-height: 70px;
+    p {
+      color: $font1;
+    }
+  }
+  main {
+    height: calc(100vh - 64px);
+    &::-webkit-scrollbar{
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: white;
+      border-radius: 100px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $bar1;
+      border-radius: 1px;
+    }
+    .intel-con {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(620px, 1fr));
+      > section {
+        section {
+          width: calc(50% - 12px);
+        }
+      }
+    }
+    .sec2 {
+      .sec2-1 {
+        @media (max-width: 1050px) {
+          flex-wrap: wrap;
+          width: 100%;
+        }
+        .sec2-1-1 {
+          min-width: 500px;
+          @media (max-width: 1050px) {
+            min-width: 100%;
+          }
+          .map-con {
+            min-height: 380px;
+            height: 100%;
+            max-height: 410px;
+            width: 100%;
+            aspect-ratio: 1.3;
+          }
+        }
+        .sec2-1-2 {
+          max-width: 250px;
+          min-width: 200px;
+          .pie-con {
+            width: 100%;
+            max-width: 200px;
+            aspect-ratio: 1;
+            * {
+              overflow: visible;
+            }
+          }
+        }
+      }
+      .sec2-2 {
+        max-width: 400px;
+        width: 20%;
+        max-height: 503px;
+        .sec2-2-1 {
+          span {
+            letter-spacing: 2px;
+          }
+        }
+        .sec2-2-2 {
+          max-width: 400px;
+          max-height: 200px;
+          aspect-ratio: 2;
+        }
+      }
+      @media (max-width: 1300px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        .sec2-2 {
+          // width: calc(100% / 3);
+          width: 100%;
+          max-width: 100%;
+          height: fit-content;
+          flex-direction: row;
+          .sec2-spam {
+            max-width: 400px;
+          }
+        }
+      }
+    }
+    &.team {
+      .MuiDataGrid-columnHeaders {
+        background-color: black;
+        border-radius: none;
+        color: white;
+        * {
+          font-weight: bold;
+          font-size: 0.95rem;
+        }
+        .MuiDataGrid-columnHeaderCheckbox {
+          svg {
+            fill: white;
+          }
+        }
+      }
+      .MuiDataGrid-virtualScroller {
+        .MuiDataGrid-row:nth-child(odd) {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+  }
+}
+.yn-full {
+  > * {
+    width: 100%;
+    height: 100%;
+  }
+}
+.yn-trans {
+  transition: calc($maintrans - 0.1s);
+}
+.circle {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+.faded {
+  background-color: rgba(255, 255, 255, 0.089);
+}
+.yn-sf {
+  font-size: 0.8rem;
+}

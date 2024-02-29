@@ -1,0 +1,32 @@
+[
+  {
+    "id": "erlang",
+    "label": "erlang",
+    "value": 309,
+    "color": "hsl(103, 70%, 50%)"
+  },
+  {
+    "id": "hack",
+    "label": "hack",
+    "value": 548,
+    "color": "hsl(129, 70%, 50%)"
+  },
+  {
+    "id": "php",
+    "label": "php",
+    "value": 10,
+    "color": "hsl(108, 70%, 50%)"
+  },
+  {
+    "id": "lisp",
+    "label": "lisp",
+    "value": 436,
+    "color": "hsl(5, 70%, 50%)"
+  },
+  {
+    "id": "c",
+    "label": "c",
+    "value": 230,
+    "color": "hsl(250, 70%, 50%)"
+  }
+]
